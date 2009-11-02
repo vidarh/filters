@@ -6,7 +6,7 @@ class OutputSink
     @data = ""
   end
 
-  def filter line
+  def filter line, tag = nil
     @data.concat(line)
   end
 

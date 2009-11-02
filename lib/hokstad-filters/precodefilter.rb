@@ -9,20 +9,20 @@ class PreCodeFilter < Filter
     @in_pre = false
   end
 
-  def filter line
+  def filter line, tag = nil
     line.chomp!
     
     if line =~ /-([a-z]+)-/
-      @pre_class = $1
+      @pre_class = $1.to_sym
     elsif line =~ /^    .*/
       if !@in_pre 
-        pass("<pre class='#{@pre_class}'><code>\n") if @pre_class
+        pass("<pre class='#{@pre_class.to_s}'><code>\n") if @pre_class
       end
       @in_pre = true
-      pass(line.concat("\n"))
+      pass(line.concat("\n"),@pre_class)
     else
-      if @in_pre && @pre_class && line != ""
-        pass(line.concat"\n")
+      if @in_pre && @pre_class
+        pass(line.concat("\n"),@pre_class)
         pass("</code></pre>\n")
         @in_pre = false
         @pre_class = nil

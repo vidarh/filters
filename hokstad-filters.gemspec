@@ -11,4 +11,5 @@ Gem::Specification.new do |s|
    s.description = s.summary
    s.files    = `git ls-files`.collect(&:chomp).collect(&:strip).find_all{|f| f =~ /lib\/.*/ || f == "README" || f =~ /.*\.rdoc/}
    s.add_dependency('rdiscount')
+   s.add_dependency('syntax')
 end

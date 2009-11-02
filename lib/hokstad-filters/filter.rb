@@ -52,15 +52,15 @@ class Filter
     data
   end
 
-  def pass line
-    @next_filter.filter(line)
+  def pass line, tag= nil
+    @next_filter.filter(line,tag)
   end
 
   def do_flush
   end
 
-  def filter line
-    @next_filter.filter(line) if @next_filter
+  def filter line, tag = nil
+    @next_filter.filter(line,tag) if @next_filter
   end
 
   def flush

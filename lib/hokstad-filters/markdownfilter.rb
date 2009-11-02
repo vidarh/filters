@@ -9,7 +9,7 @@ class MarkdownFilter < Filter
     @d = ""
   end
   
-  def filter line
+  def filter line, tag
     @d.concat(line)
   end
 
