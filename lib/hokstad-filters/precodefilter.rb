@@ -1,5 +1,5 @@
 
-require 'hokstad-markdown/filter'
+require 'hokstad-filters/filter'
 
 class PreCodeFilter < Filter
 

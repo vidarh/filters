@@ -1,5 +1,5 @@
 
-require 'outputsink'
+require 'hokstad-filters/outputsink'
 
 class Filter
   attr_accessor :next_filter

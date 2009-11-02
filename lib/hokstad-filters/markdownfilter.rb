@@ -1,6 +1,6 @@
 
 require 'rdiscount'
-require 'filter'
+require 'hokstad-filters/filter'
 
 
 class MarkdownFilter < Filter
