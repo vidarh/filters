@@ -3,7 +3,7 @@ all: gem install
 
 gem:	pkg
 	-mkdir pkg
-	gem build hokstad-markdown.gemspec
+	gem build hokstad-filters.gemspec
 	touch pkg
 	mv *.gem pkg/
 
