@@ -3,9 +3,9 @@ require 'rdiscount'
 require 'hokstad-filters/batchfilter'
 
 
-class MarkdownFilter < Filter
+class MarkdownFilter < BatchFilter
   def do_flush
-    @d = RDiscount.new(data).to_html
+    @d = RDiscount.new(@d).to_html
   end
 end
 
