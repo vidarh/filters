@@ -1,24 +1,11 @@
 
 require 'rdiscount'
-require 'hokstad-filters/filter'
+require 'hokstad-filters/batchfilter'
 
 
 class MarkdownFilter < Filter
-  def initialize n = nil
-    super
-    @d = ""
-  end
-  
-  def filter line, tag
-    @d.concat(line)
-  end
-
   def do_flush
-    @d = RDiscount.new(@d).to_html
-  end
-
-  def data
-    @d
+    @d = RDiscount.new(data).to_html
   end
 end
 
