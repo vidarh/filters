@@ -1,5 +1,6 @@
 
 require 'hokstad-filters/filter'
+require 'syntax/convertors/html'
 
 class RubyHighlighter < Filter
 
