@@ -12,7 +12,7 @@ class PreCodeFilter < Filter
   def filter line, tag = nil
     line.chomp!
     
-    if line =~ /-([a-z]+)-/
+    if line =~ /^-([a-z]+)-/
       @pre_class = $1.to_sym
     elsif line =~ /^    .*/
       if !@in_pre 
