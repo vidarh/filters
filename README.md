@@ -21,3 +21,7 @@ This bit on the other hand:
     end
 
 ... has the Ruby class set
+
+Consider this experimental, and the API is likely to change and break, so
+please don't depend on it unless you're either willing to keep tracking my
+changes, or fork it.
