@@ -9,7 +9,7 @@ class InlineMarkupFilter < Filter
   end
 
   def filter line, tag = nil
-    line.gsub!(/~~?([a-zA-Z](\\~|[^~])*)~~?/,'<del>\1</del>')
+    line.gsub!(/~~?((\\~|[^~])+)~~?/,'<del>\1</del>')
     line.gsub!('\~','~')
     pass(line,tag)
   end
