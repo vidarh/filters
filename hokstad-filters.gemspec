@@ -2,8 +2,8 @@
 
 Gem::Specification.new do |s|
    s.name     = "hokstad-filters"
-   s.version  = "0.8"
-   s.date     = "2009-11-02"
+   s.version  = "0.9"
+   s.date     = "2013-05-06"
    s.authors  = "Vidar Hokstad"
    s.email    = "vidar@hokstad.com"
    s.summary  = "Wrapper for rdiscount that provides additional filters on top"
