@@ -24,11 +24,11 @@ class PreCodeFilter < Filter
       if @in_pre && @pre_class
         pass(line.concat("\n"),@pre_class)
         pass("</code></pre>\n")
-        @in_pre = false
         @pre_class = nil
       else
         pass(line.concat("\n"))
       end
+      @in_pre = false
     end
   end
 
