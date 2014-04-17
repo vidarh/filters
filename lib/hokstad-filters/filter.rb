@@ -21,8 +21,9 @@ class Filter
   end
 
   def process data
-    data.each do |line|
-      filter(line)
+    data.split("\n").each do |line|
+#      STDERR.puts line.inspect
+      filter(line+"\n")
     end
     flush
     to_s
