@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
    s.summary  = "Wrapper for rdiscount that provides additional filters on top"
    s.homepage = "http://www.hokstad.com"
    s.description = s.summary
-   s.files    = `git ls-files`.collect(&:chomp).collect(&:strip).find_all{|f| f =~ /lib\/.*/ || f == "README" || f =~ /.*\.rdoc/}
+   s.files    = `git ls-files`.split("\n").collect(&:chomp).collect(&:strip).find_all{|f| f =~ /lib\/.*/ || f == "README" || f =~ /.*\.rdoc/}
    s.add_dependency('rdiscount')
    s.add_dependency('syntax')
 end
