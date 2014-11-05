@@ -1,9 +1,4 @@
 
-require 'hokstad-filters/rubyhighlighter'
-require 'hokstad-filters/precodefilter'
-require 'hokstad-filters/markdownfilter'
-require 'hokstad-filters/autoprefixfilter'
-require 'hokstad-filters/inlinemarkupfilter'
 require 'hokstad-filters/githubcodefencefilter'
 
 describe "GitHubCodeFenceFilter" do
