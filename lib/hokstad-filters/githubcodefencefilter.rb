@@ -11,7 +11,8 @@ class GitHubCodeFenceFilter < Filter
   def filter line, tag = nil
     if (line[0..2] == "```") && !@in_pre
       @in_pre = true
-      pass("-#{line[3..-1].chomp}-\n") if line.size > 3
+      lang = line[3..-1].chomp
+      pass("-#{lang}-\n") if !lang.empty?
     elsif line == "```\n" || line == "```"
       @in_pre = false
       @lang = nil
