@@ -6,6 +6,7 @@ require 'hokstad-filters/formfilter'
 require 'hokstad-filters/inlinemarkupfilter'
 require 'hokstad-filters/autoprefixfilter'
 require 'hokstad-filters/githubcodefencefilter'
+require 'hokstad-filters/gitfilter'
 
 def extended_markdown(data)
   Filter.chain(FormFilter,AutoPrePrefixFilter,PreCodeFilter,HighlightFilter,InlineMarkupFilter,MarkdownFilter).process(data)

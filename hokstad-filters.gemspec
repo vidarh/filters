@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
    s.name     = "hokstad-filters"
-   s.version  = "0.20"
+   s.version  = "0.21"
    s.date     = "2014-11-05"
    s.authors  = "Vidar Hokstad"
    s.email    = "vidar@hokstad.com"
